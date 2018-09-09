@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/prefer-stateless-function": 0,
+    # This seems to be buggy we don't want eslint to check this
+    "import/no-extraneous-dependencies": 0,
+    # This is a depricated rule. So we turned off it.
+    "react/require-extension": 0,
+    # We can write JSX in anyfile we want.
+    "react/jsx-filename-extension": 0,
+    # propTypes can be object
+    "react/forbid-prop-types": 0,
+    # They don't have to use this
+    "class-methods-use-this": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/destructuring-assignment": 0
+  }
+}

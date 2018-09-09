@@ -1,0 +1,52 @@
+{
+  "name": "crypto-doggies-webapp",
+  "version": "0.0.1",
+  "description": "Web application to browser crypto doggy breads",
+  "scripts": {
+    "build": "npm run test && webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "deploy": "npm run build && npm run firebase:login && npm run firebase:deploy",
+    "firebase:login": "./node_modules/firebase-tools/bin/firebase login",
+    "firebase:deploy": "./node_modules/firebase-tools/bin/firebase deploy",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Craigtut/crypto-doggies-webapp.git"
+  },
+  "author": "Craig Tuttle",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Craigtut/crypto-doggies-webapp/issues"
+  },
+  "homepage": "https://github.com/Craigtut/crypto-doggies-webapp#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.5.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.2",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  }
+}

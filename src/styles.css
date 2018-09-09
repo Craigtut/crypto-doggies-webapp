@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: #050214;
+  color: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  opacity: .87;
+}
+
+input:focus {
+  outline: none;
+}

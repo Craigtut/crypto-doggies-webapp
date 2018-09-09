@@ -1,0 +1,10 @@
+#Node Modules
+node_modules
+
+build
+
+# Code Editor Settings
+.vscode
+
+# OSX
+.DS_Store
