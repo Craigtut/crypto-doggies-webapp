@@ -18,10 +18,24 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' },
+          { loader: 'css-loader?modules' },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader?modules', // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
       },
     ],
@@ -32,6 +46,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: manifest.title,
+      description: manifest.description,
       template: 'src/template.html',
     }),
   ],
