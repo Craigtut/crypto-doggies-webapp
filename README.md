@@ -4,6 +4,8 @@ A rediculous web app for viewing breeds of dogs - https://crypto-doggies.firebas
 
 This app pulls down a list of dog breeds and then shows images associated with each breed. All data is pulled down from a [Dog API](http://dog.ceo/dog-api/) and names are pulled down from a Name API. It has a fun Crypto theme to it. Why? - because crypto everything.
 
+The design (sketch) file used for basic designs and ideation is in the repo as well.
+
 ## Features
 
 * Mobile Ready and Responsive
