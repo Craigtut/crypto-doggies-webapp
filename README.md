@@ -8,8 +8,8 @@ This app pulls down a list of dog breeds and then shows images associated with e
 
 * Mobile Ready and Responsive
 * View images by breed or filter down to a sub-breed.
-* Ghost content loading screens to decrease perceived loading
-  * On Bread List loading
+* Ghost content loading screens to decrease perceived loading times
+  * On Breed List loading
   * On dog image's loading
 
 ## Installation
