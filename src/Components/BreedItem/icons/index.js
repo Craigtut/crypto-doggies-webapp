@@ -11,5 +11,5 @@ function importAll(r) {
   return object;
 }
 
-const images = importAll(require.context('./', false, /\.(svg)$/));
+const images = importAll(require.context('!!raw-loader!./', false, /\.(svg)$/));
 export default images;

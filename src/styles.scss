@@ -1,8 +1,9 @@
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background: #050B0A;
   color: #ffffff;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -12,6 +13,37 @@ body {
 
 h1, h2, h3, h4, h5, h6, a, p {
   opacity: .87;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+  opacity: 0.76;
+}
+
+h4 {
+  font-size: 1em;
+  opacity: 0.64;
+}
+
+h5 {
+  font-size: 1em;
+  opacity: 0.36;
+}
+
+p {
+  font-size: 1em;
+  opacity: 0.48;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 input:focus {

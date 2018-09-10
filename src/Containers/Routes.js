@@ -11,8 +11,8 @@ export default class Routes extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/breed/:breedId" component={BreedGrid} />
-        <Route exact path="/breed/:breedId/:subBreed" component={BreedGrid} />
+        <Route exact path="/breed/:breed" component={BreedGrid} />
+        <Route exact path="/breed/:breed/sub/:subBreed" component={BreedGrid} />
         <Route component={ErrorPage} />
       </Switch>
     );

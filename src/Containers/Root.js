@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Visible } from 'react-grid-system';
 import store from '../Redux/store';
 import Routes from './Routes';
-import { Breakpoints } from '../Theme';
+import { Breakpoints, Colors } from '../Theme';
 
 import BreedNavigation from './BreedNavigation';
 
@@ -37,8 +36,8 @@ export default class Root extends Component {
       <Provider store={store}>
         <Router>
           <div style={{ display: 'flex' }}>
-            <BreedNavigation mobile={(width < Breakpoints.sm)} />
-            <div style={{ flex: 4 }}>
+            <BreedNavigation style={{ zIndex: 1 }} mobile={(width < Breakpoints.sm)} />
+            <div style={{ display: 'flex', flex: 4, padding: '36px', background: Colors.darkGrey, zIndex: '0' }}>
               <Routes />
             </div>
           </div>

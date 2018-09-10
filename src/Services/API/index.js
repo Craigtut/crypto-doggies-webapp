@@ -7,7 +7,8 @@ function request(endpoint) {
 }
 
 async function getNames(num) {
-  return axios.get(`https://uinames.com/api/?amount=${num}`);
+  const result = await axios.get(`https://uinames.com/api/?region=united states&amount=${Math.min(num, 500)}`);
+  return result.data;
 }
 
 export async function getBreeds() {
@@ -20,9 +21,12 @@ export async function getDogs(breed, subBreed = null) {
   const imageResults = await request(endpoint);
 
   const numImages = imageResults.data.message.length;
-  const nameResults = getNames(numImages);
+  const nameResults = await getNames(numImages);
 
   // combine dog imgages with random names
-  const result = imageResults.data.map((image, i) => { return { name: nameResults[i], image }; });
+  const result = imageResults.data.message.map((image, i) => {
+    const name = (nameResults[i]) ? nameResults[i].name : 'Un-named';
+    return { name, image };
+  });
   return result;
 }
